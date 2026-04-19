@@ -1,0 +1,209 @@
+/* 
+  A11Y & SEO Optimized CSS Reset
+  Preserves accessibility while normalizing styles
+*/
+
+/* 1. Box sizing rules - everywhere */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Improve text rendering and font smoothing */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* 4. Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  scroll-behavior: smooth;
+}
+
+/* 5. Make media elements responsive by default */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 6. Remove built-in form typography styles */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Better heading defaults (SEO friendly) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  line-height: 1.2;
+}
+
+/* 9. Better paragraph defaults */
+p {
+  text-wrap: pretty;
+}
+
+/* 10. Remove list styles but keep semantics */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* 11. Reset links but keep accessibility */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* 12. Make buttons and interactive elements accessible */
+button,
+[type='button'],
+[type='submit'],
+[type='reset'] {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* 13. Remove default button styles while preserving accessibility */
+button {
+  background: transparent;
+  border: 0;
+}
+
+/* 14. Prevent zoom on orientation change for inputs (iOS) */
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+textarea {
+  font-size: 16px;
+}
+
+/* 15. Remove animations for people who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 16. Make focus indicators visible and accessible */
+:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* 17. Skip to content link (SEO + a11y) */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: #2563eb;
+  color: white;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  z-index: 9999;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* 18. Table defaults for accessibility */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+caption {
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+/* 19. Improve default code rendering */
+code,
+pre {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.875em;
+}
+
+/* 20. Remove default fieldset styling */
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 21. Legend defaults */
+legend {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* 22. Make iframes responsive */
+iframe {
+  border: 0;
+  max-width: 100%;
+}
+
+/* 23. Improve default spacing for block elements */
+blockquote,
+dl,
+dd,
+figure {
+  margin: 0;
+}
+
+/* 24. Remove default horizontal rule styling */
+hr {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 1rem 0;
+}
+
+/* 25. Maintain scroll padding for anchor links (SEO) */
+html {
+  scroll-padding-top: 2rem;
+  scroll-behavior: smooth;
+}
