@@ -24,7 +24,7 @@
 	<meta property="og:locale" content="ru_RU">
 
 	<!-- Security (Basic) -->
-  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+	<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 
 	<!-- Favicons -->
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -34,13 +34,36 @@
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="styles/reset.css">
+	<link rel="stylesheet" href="styles/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="styles/main.css">
 
 </head>
 
 <body>
+	<div class="container-main">
+		<header class="header">
+			<div class="container header__container">
+				<div class="header__content row">
+					<a href="/" class="header__logo col-sm">
+						<img class="header__logo-img" src="img/logo_header.webp" alt="Логотип Человечный фактор">
+					</a>
+					<nav class="header__nav row col-sm">
+						<ul class="header__nav-list">
+							<li class="header__nav-item"><a class="header__nav-link" href="/">Обо мне</a></li>
+							<li class="header__nav-item"><a class="header__nav-link" href="/about">Зачем ко мне идти</a></li>
+							<li class="header__nav-item"><a class="header__nav-link" href="/services">Стоимость</a></li>
+							<li class="header__nav-item"><a class="header__nav-link" href="/contacts">FAQ</a></li>
+						</ul>
+					</nav>
+				</div>
+				<button id="telegramButton" class="animated-btn">
+    			Хочу на коучинг!
+  			</button>
+			</div>
+		</header>
+	</div>
 
-
+<script src="js/tg.js"></script>
 </body>
 
 </html>
