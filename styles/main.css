@@ -59,32 +59,42 @@
 }
 
 .container-main {
-    margin: 0;
+    margin: 0 auto;
+    height: 100vh;
     padding: 0;
-    width: 100%;
+    max-width: 1440px;
     overflow-x: hidden;
 }
 
 /* Header */
 
 .header {
-    padding: 1rem 0 0 1rem;
-}
-
-.header__container {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding: 1rem 0 0 1rem;
+    max-height: 7rem;
+    overflow: hidden;    
 }
 
-.header__nav {
-    font-family: 'Montserrat_regular';
-    font-size: 1.2rem;
-    font-weight: 700;
+.header__item {
+    margin-right: 1rem;
+}
+
+.header__content {
+    min-height: 5rem;
+    max-height: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+.header__content-item {
+    display: flex;
+    align-items: center;
 }
 
 .header__logo {
+    min-width: 5rem;
     max-width: 5rem;
     padding: 0;
     margin-right: 2rem;
@@ -92,31 +102,38 @@
 
 .header__logo-img {
     transform: rotate(15deg);
+    object-fit: contain;
+}
+
+.header__nav {
+    font-family: 'Montserrat_regular';
+    font-size: 1.2rem;
+    font-weight: 700;
+    align-items: center;
+    margin-right: 2rem;
 }
 
 .header__nav-list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 2rem;
-    align-items: center;
-}
-
-.header__nav {
     align-items: center;
 }
 
 .header__nav-item {
     text-align: center;
+    text-wrap: wrap;
 }
 
 .header__nav-link {
     text-decoration: none;
     color: #000;
-
 }
 
 .animated-btn {
-    position: relative;
+    max-width: 15rem;
+    max-height: 3.7rem;   position: relative;
     padding: 1rem 2.5rem;
     font-size: 1.125rem;
     font-weight: 700;
@@ -139,6 +156,7 @@
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     animation: gradientMove 3s ease infinite;
+    text-wrap: nowrap;
 }
 
 /* Gradient Animation Keyframes */
@@ -159,7 +177,7 @@
 /* Hover Effects */
 .animated-btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+    box-shadow: 0 5px 10px rgba(139, 92, 246, 0.4);
     animation: gradientMove 1.5s ease infinite;
 }
 

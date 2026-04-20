@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex Items Width Change on Window Resize | Pure CSS</title>
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f0f2f5;
+      font-family: system-ui, 'Segoe UI', sans-serif;
+      padding: 2rem;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* ============================================
+       CORE SOLUTION: Flex items width changes with window size
+       - ONLY CSS - NO JAVASCRIPT
+       - Key properties: display: flex, flex-wrap: wrap, flex: 1 1 <basis>
+       - As window gets smaller, items shrink and reflow
+       - As window gets larger, items grow to fill space
+    ============================================ */
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    /* 
+      THE MAGIC HAPPENS HERE ↓
+      flex: 1 1 200px means:
+      - flex-grow: 1 → items expand to fill extra space
+      - flex-shrink: 1 → items shrink when window gets smaller
+      - flex-basis: 200px → starting width, but grows/shrinks dynamically
+      - min-width prevents items from becoming too tiny
+    */
+    .flex-item {
+      flex: 1 1 200px;
+      min-width: 120px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      border-radius: 0.75rem;
+      font-weight: 600;
+      font-size: 1.2rem;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* Optional: hover effect */
+    .flex-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    /* Additional responsive refinement with media queries */
+    @media (max-width: 768px) {
+      .flex-item {
+        flex-basis: 160px;  /* smaller basis on tablets */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .flex-item {
+        flex-basis: 140px;  /* even smaller on phones */
+        padding: 1.5rem 0.75rem;
+        font-size: 1rem;
+      }
+      body {
+        padding: 1rem;
+      }
+    }
+
+    /* simple explanation text */
+    .info {
+      text-align: center;
+      margin-top: 1.5rem;
+      color: #4a5568;
+      font-size: 0.85rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .info code {
+      background: #e2e8f0;
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.3rem;
+      font-family: monospace;
+    }
+
+    hr {
+      margin: 1rem 0;
+      border: none;
+      border-top: 1px solid #cbd5e1;
+    }
+  </style>
+</head>
+<body>
+  <div style="width: 100%;">
+    <!-- MINIMAL FLEX CONTAINER - resize window to see items change width -->
+    <div class="flex-container">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+      <div class="flex-item">Item 4</div>
+      <div class="flex-item">Item 5</div>
+    </div>
+
+    <div class="info">
+      <hr>
+      📐 <strong>Pure CSS solution — resize your browser window</strong><br><br>
+      Each flex item uses: <code>flex: 1 1 200px;</code> + <code>flex-wrap: wrap;</code><br>
+      → Items grow to fill space when window widens<br>
+      → Items shrink and wrap to new rows when window narrows<br>
+      → <strong>No JavaScript, no images — just CSS flexbox</strong>
+    </div>
+  </div>
+</body>
+</html>
