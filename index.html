@@ -1,67 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- SEO Meta -->
+    <title>Человечный фактор</title>
+    <meta
+      name="description"
+      content="Коучинг для тех, кто работает, но перестал понимать — зачем и какой ценой."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Оля" />
+    <link rel="canonical" href="https://example.com/current-page" />
 
-	<!-- SEO Meta -->
-	<title>Человечный фактор</title>
-	<meta name="description" content="Коучинг для тех, кто работает, но перестал понимать — зачем и какой ценой.">
-	<meta name="robots" content="index, follow">
-	<meta name="author" content="Оля">
-	<link rel="canonical" href="https://example.com/current-page">
+    <!-- Open Graph (Social Media) -->
+    <meta property="og:title" content="Человечный фактор" />
+    <meta
+      property="og:description"
+      content="Коучинг для тех, кто работает, но перестал понимать — зачем и какой ценой."
+    />
+    <meta property="og:url" content="https://example.com/current-page" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://example.com/social-preview.jpg"
+    />
+    <meta
+      property="og:image:alt"
+      content="Изображение текста Человечный фактор и картинка рукопожатия"
+    />
+    <meta property="og:site_name" content="Человечный фактор" />
+    <meta property="og:locale" content="ru_RU" />
 
-	<!-- Open Graph (Social Media) -->
-	<meta property="og:title" content="Человечный фактор">
-	<meta property="og:description" content="Коучинг для тех, кто работает, но перестал понимать — зачем и какой ценой.">
-	<meta property="og:url" content="https://example.com/current-page">
-	<meta property="og:type" content="website">
-	<meta property="og:image" content="https://example.com/social-preview.jpg">
-	<meta property="og:image:alt" content="Изображение текста Человечный фактор и картинка рукопожатия">
-	<meta property="og:site_name" content="Человечный фактор">
-	<meta property="og:locale" content="ru_RU">
+    <!-- Security (Basic) -->
+    <meta
+      http-equiv="Referrer-Policy"
+      content="strict-origin-when-cross-origin"
+    />
 
-	<!-- Security (Basic) -->
-	<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-	<!-- Favicons -->
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
 
-	<!-- CSS -->
-	<link rel="stylesheet" href="styles/reset.css">
-	<link rel="stylesheet" href="styles/bootstrap-grid.min.css">
-	<link rel="stylesheet" href="styles/main.css">
+  <body>
+    <div class="container-main">
+      <header class="header">
+        <div class="header__content header__item">
+          <a href="/" class="header__logo header__content-item">
+            <img
+              class="header__logo-img"
+              src="img/logo_header.webp"
+              alt="Логотип Человечный фактор"
+            />
+          </a>
+          <nav class="header__nav header__content-item">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="/">Обо мне</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="/about">Зачем ко мне идти</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="/services">Стоимость</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="/contacts">FAQ</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <button id="telegramButton" class="animated-btn header__item">
+          Хочу на коучинг!
+        </button>
+      </header>
 
-</head>
+      <main class="main"></main>
+    </div>
 
-<body>
-	<div class="container-main">
-		<header class="header">
-			<div class="header__content header__item">
-				<a href="/" class="header__logo header__content-item">
-					<img class="header__logo-img" src="img/logo_header.webp" alt="Логотип Человечный фактор">
-				</a>
-				<nav class="header__nav header__content-item">
-					<ul class="header__nav-list">
-						<li class="header__nav-item"><a class="header__nav-link" href="/">Обо мне</a></li>
-						<li class="header__nav-item"><a class="header__nav-link" href="/about">Зачем ко мне идти</a></li>
-						<li class="header__nav-item"><a class="header__nav-link" href="/services">Стоимость</a></li>
-						<li class="header__nav-item"><a class="header__nav-link" href="/contacts">FAQ</a></li>
-					</ul>
-				</nav>
-			</div>
-			<button id="telegramButton" class="animated-btn header__item">
-				Хочу на коучинг!
-			</button>
-		</header>
-	</div>
-
-	<script src="js/tg.js"></script>
-</body>
-
+    <script src="js/tg.js"></script>
+  </body>
 </html>
