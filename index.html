@@ -69,16 +69,16 @@
           <nav class="header__nav header__content-item">
             <ul class="header__nav-list">
               <li class="header__nav-item">
-                <a class="header__nav-link" href="/">Обо мне</a>
+                <a class="header__nav-link" href="#about">Обо мне</a>
               </li>
               <li class="header__nav-item">
-                <a class="header__nav-link" href="/about">Зачем ко мне идти</a>
+                <a class="header__nav-link" href="#why">Зачем ко мне идти</a>
               </li>
               <li class="header__nav-item">
-                <a class="header__nav-link" href="/services">Стоимость</a>
+                <a class="header__nav-link" href="#pricing">Стоимость</a>
               </li>
               <li class="header__nav-item">
-                <a class="header__nav-link" href="/contacts">FAQ</a>
+                <a class="header__nav-link" href="#faq">FAQ</a>
               </li>
             </ul>
           </nav>
@@ -88,7 +88,43 @@
         </button>
       </header>
 
-      <main class="main"></main>
+      <main class="main">
+        <section class="hero">
+          <figure class="hero__image hero__item">
+            <picture class="hero__picture">
+              <source srcset="img/photo.webp" type="image/webp" />
+
+              <img
+                class="hero__image-img"
+                src="img/photo.jpg"
+                alt="Изображение текста Человечный фактор и картинка рукопожатия"
+              />
+            </picture>
+
+            <figcaption></figcaption>
+          </figure>
+
+          <article class="hero__content hero__item">
+            <h1 class="hero__title">
+              Коучинг для тех, кто работает, но перестал понимать — зачем и
+              какой ценой
+            </h1>
+            <p class="hero__description">
+              Помогаю выйти из «автопилота», вернуть ясность и найти свои смыслы
+              в работе, не сжигая себя дотла.
+            </p>
+            <p class="hero__description">
+              Для тех, кто устал быть функцией и хочет вернуть в работу
+              человеческий фактор.
+            </p>
+          </article>
+        </section>
+
+        <section class="about" id="about">
+          <h2 class="about-title">Обо мне</h2>
+          
+        </section>
+      </main>
     </div>
 
     <script src="js/tg.js"></script>
