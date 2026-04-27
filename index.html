@@ -54,35 +54,30 @@
     <link rel="stylesheet" href="styles/bootstrap-grid.min.css" />
     <link rel="stylesheet" href="styles/style.css" />
   </head>
- 
+
   <body>
     <div class="container-main">
       <header class="header">
-        <div class="header__content header__item">
-          <a href="/" class="header__logo header__content-item">
-            <img
-              class="header__logo-img"
-              src="img/logo_header.webp"
-              alt="Логотип Человечный фактор"
-            />
-          </a>
-          <nav class="header__nav header__content-item">
-            <ul class="header__nav-list">
-              <li class="header__nav-item">
-                <a class="header__nav-link" href="#about">Обо мне</a>
-              </li>
-              <li class="header__nav-item">
-                <a class="header__nav-link" href="#why">Зачем ко мне идти</a>
-              </li>
-              <li class="header__nav-item">
-                <a class="header__nav-link" href="#pricing">Стоимость</a>
-              </li>
-              <li class="header__nav-item">
-                <a class="header__nav-link" href="#faq">FAQ</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <a href="/" class="header__logo header__item">
+          <img
+            class="header__logo-img"
+            src="img/logo_header.webp"
+            alt="Логотип Человечный фактор"
+          />
+        </a>
+        <nav class="header__nav header__item">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#about">Обо мне</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#pricing">Стоимость</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#faq">FAQ</a>
+            </li>
+          </ul>
+        </nav>
         <button id="telegramButton" class="animated-btn header__item">
           Хочу на коучинг!
         </button>
@@ -121,8 +116,100 @@
         </section>
 
         <section class="about" id="about">
-          <h2 class="about-title">Обо мне</h2>
+          <h2 class="about__title">Привет! Я Оля. Главная по людям (и смыслам).</h2>
+
+          <div class="about__container">
+            <ul class="about__description about__container-item">
+              <li class="about__description-item">
+                Я не «просветленный гуру».
+              </li>
+              <li class="about__description-item">
+                Я практик. Более 10 лет управляю командами в IT (Яндекс, крупные корпорации). 
+              </li>
+              <li class="about__description-item">
+                Я знаю, что такое релизы, OKR и выгорание, не по учебникам.
+              </li>
+              <li class="about__description-item">
+                Я прошла путь от «героического достигаторства» до «тихого лидерства». 
+              </li>
+              <li class="about__description-item">
+                <h3 class="about__description-title">Мой метод:</h3>
+              </li>
+              <li class="about__description-item">
+                Сплав жестких управленческих фреймворков и глубокого коучингового подхода.
+              </li>
+              <li class="about__description-item">
+                Я не буду учить вас «дышать правильно» или «просто мыслить позитивно».
+              </li>
+              <li class="about__description-item">
+                Мы будем работать с вашей архитектурой: с мышлением, нагрузкой, честностью и смыслами. 
+              </li>
+              <li class="about__description-item">
+                Часто будет сложно, иногда - легко, но это точно стоит того!
+              </li>
+            </ul>
+            <div class="todo about__container-item"></div>
+          </div>
+
           
+
+          <div class="about__container">
+            <div class="todo about__container-item"></div>
+            <ul class="about__description about__container-item">
+              <li class="about__description-item">
+                <h3 class="about__description-title">С чем ко мне приходят:</h3>
+              </li>
+              <li class="about__description-item">
+                «Вроде всё нормально: должность, зарплата, команда. Но внутри — выжженная земля. Я не понимаю, зачем я это делаю».
+              </li>
+              <li class="about__description-item">
+                «Я живу в режиме "надо". В календаре нет места для меня. Я эффективен для бизнеса, но потерян для себя».
+              </li>
+              <li class="about__description-item">
+                «Я горю, но не грею. Или наоборот — замерз и работаю на автопилоте».
+              </li>
+              <li class="about__description-item">
+                «Надо принимать сложные решения, а в голове туман и страх ошибки».
+              </li>
+              <li class="about__description-item">
+                <h3 class="about__description-title">Если узнали себя — вы не сломались. Просто вашей системе нужна отладка. Или пауза. И я верю, что в каждом уже есть все ответы, нужно только подобрать правильные вопросы. </h3>
+              </li>
+            </ul>            
+          </div>
+
+        </section>
+
+        <section class="pricing" id="pricing">
+          <h2 class="pricing__title">
+            Коучинг — это легальная пауза, чтобы сверить карту.<br/>Мы не «лечим» вас (вы здоровы).<br/>Мы меняем оптику.
+          </h2>          
+          <div class="pricing__container">
+            <h3 class="pricing__subtitle">
+              Я работаю в двух форматах:
+            </h3>
+            <div class="pricing__cards-container">
+              <article class="card">
+                <h4 class="card__title">Ясность</h4>
+                <p class="card__subtitle"><strong>5</strong> сессий</p>
+                <p class="card__desc">
+                  Для конкретного запроса или острого состояния. Выпутаться из клубка «всё навалилось». Принять сложное карьерное решение. Найти выход из конфликта с командой или боссом. Снять острую тревогу и найти первые шаги. Результат: Выдыхаете, видите структуру хаоса, начинаете действовать.
+                </p>
+                <h4 class="card__price">
+                  19 000 ₽
+                </h4>
+              </article>
+              <article class="card">
+                <h4 class="card__title">Глубина</h4>
+                <p class="card__subtitle"><strong>10</strong> сессий</p>
+                <p class="card__desc">
+                  Для глубинных изменений сценариев. Пересобрать свой стиль управления (от «я всё тащу сам» к «команда работает»). Найти новые смыслы, если старые драйверы сгорели. Восстановить контакт с собой после выгорания. Выстроить личные границы так, чтобы они работали, а не рушили карьеру. Результат: Вы меняете не просто действия, а состояние, из которого живете.
+                </p>
+                <h4 class="card__price">
+                  42 000 ₽
+                </h4>
+              </article>
+            </div>            
+          </div>
         </section>
       </main>
     </div>
@@ -130,3 +217,4 @@
     <script src="js/tg.js"></script>
   </body>
 </html>
+
